@@ -12,6 +12,7 @@ def devide_line(s):
             title_end = s.rfind(",")
             title = s[id_end+1: title_end]
             genres = s[title_end+1:]
+            genres = genres.replace(",","")
         else:
             title = s[id_end+1:]
     else:
@@ -21,6 +22,7 @@ def devide_line(s):
         year = s[year_start+1:year_end-1]
         #выделение genres  
         genres = s[year_end+1:]
+        genres = genres.replace(",","")
         #выделение title 
         title = s[id_end+1:year_start-1]
     
